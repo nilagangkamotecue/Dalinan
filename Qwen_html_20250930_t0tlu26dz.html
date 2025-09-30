@@ -1,0 +1,1502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dalinan | Premium Eco Laundry Detergent for Laundry Shops</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2e7d32;
+            --primary-dark: #1b5e20;
+            --secondary: #4caf50;
+            --accent: #ff9800;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --gray: #6c757d;
+            --light-gray: #e9ecef;
+            --white: #ffffff;
+            --shadow: 0 10px 30px rgba(0,0,0,0.1);
+            --shadow-hover: 0 15px 40px rgba(0,0,0,0.15);
+            --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            --border-radius: 16px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--dark);
+            line-height: 1.7;
+            background-color: var(--light);
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Header & Navigation */
+        header {
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            transition: var(--transition);
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+        
+        .logo-icon {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: var(--white);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-weight: 800;
+            font-size: 1.5rem;
+            box-shadow: var(--shadow);
+        }
+        
+        .logo-text {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 2.2rem;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 35px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            font-size: 1.05rem;
+            transition: var(--transition);
+            position: relative;
+            padding: 5px 0;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            border-radius: 3px;
+            transition: var(--transition);
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 14px 36px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: var(--white);
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--primary-dark), #2e7d32);
+            z-index: -1;
+            opacity: 0;
+            transition: var(--transition);
+        }
+        
+        .btn:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .btn:hover::before {
+            opacity: 1;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(46, 125, 50, 0.92) 0%, rgba(28, 94, 32, 0.92) 100%), url('https://images.unsplash.com/photo-1600857544200-b238c8c1616a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            padding: 180px 0 120px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 Q50,20 100,0 L100,100 Q50,80 0,100 Z" fill="rgba(255,255,255,0.05)"/></svg>');
+            background-size: cover;
+            opacity: 0.3;
+        }
+        
+        .hero-content {
+            max-width: 750px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero h1 {
+            font-size: 4.2rem;
+            margin-bottom: 25px;
+            line-height: 1.2;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+        
+        .hero p {
+            font-size: 1.4rem;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            max-width: 650px;
+        }
+        
+        .hero-stats {
+            display: flex;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 5px;
+        }
+        
+        .stat-label {
+            font-size: 1rem;
+            opacity: 0.85;
+        }
+        
+        /* Features Section */
+        .section {
+            padding: 100px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.8rem;
+            color: var(--primary);
+            position: relative;
+            display: inline-block;
+            padding-bottom: 20px;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            border-radius: 2px;
+        }
+        
+        .section-title p {
+            font-size: 1.2rem;
+            color: var(--gray);
+            max-width: 700px;
+            margin: 20px auto 0;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 35px;
+        }
+        
+        .feature-card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            z-index: -1;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .feature-icon {
+            width: 90px;
+            height: 90px;
+            background: linear-gradient(135deg, rgba(46, 125, 50, 0.15), rgba(76, 175, 80, 0.15));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            color: var(--primary);
+            font-size: 2.2rem;
+            transition: var(--transition);
+        }
+        
+        .feature-card:hover .feature-icon {
+            transform: scale(1.1);
+            background: linear-gradient(135deg, rgba(46, 125, 50, 0.25), rgba(76, 175, 80, 0.25));
+        }
+        
+        .feature-card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+        
+        /* Products Section */
+        .products {
+            background-color: var(--white);
+        }
+        
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        
+        .product-card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .product-img {
+            height: 220px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .product-img::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            transform: rotate(30deg);
+        }
+        
+        .eco-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: var(--accent);
+            color: var(--white);
+            padding: 8px 15px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .product-info {
+            padding: 30px;
+        }
+        
+        .product-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 12px;
+            color: var(--dark);
+        }
+        
+        .product-info p {
+            color: var(--gray);
+            margin-bottom: 20px;
+            min-height: 70px;
+        }
+        
+        .product-price {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin: 15px 0;
+        }
+        
+        .product-meta {
+            display: flex;
+            justify-content: space-between;
+            color: var(--gray);
+            font-size: 0.95rem;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid var(--light-gray);
+        }
+        
+        /* Order Section */
+        .order-section {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: var(--white);
+            text-align: center;
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .order-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 Q50,20 100,0 L100,100 Q50,80 0,100 Z" fill="rgba(255,255,255,0.08)"/></svg>');
+            background-size: cover;
+            opacity: 0.5;
+        }
+        
+        .order-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .order-content h2 {
+            font-size: 3.2rem;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+        
+        .order-content p {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .btn-accent {
+            background: linear-gradient(135deg, var(--accent), #f57c00);
+            box-shadow: 0 10px 25px rgba(255, 152, 0, 0.4);
+        }
+        
+        .btn-accent::before {
+            background: linear-gradient(135deg, #e65100, #f57c00);
+        }
+        
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        
+        .about-text h2 {
+            color: var(--primary);
+            font-size: 2.8rem;
+            margin-bottom: 25px;
+        }
+        
+        .about-text p {
+            margin-bottom: 25px;
+            font-size: 1.1rem;
+        }
+        
+        .about-image {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            height: 500px;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        
+        .about-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1600857544200-b238c8c1616a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.9;
+        }
+        
+        .about-image-content {
+            text-align: center;
+            color: var(--white);
+            z-index: 2;
+            padding: 30px;
+        }
+        
+        .about-image-content h3 {
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        
+        .about-image-content p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        /* Contact Section */
+        .contact-section {
+            background-color: var(--white);
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 50px;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+        }
+        
+        .contact-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, rgba(46, 125, 50, 0.15), rgba(76, 175, 80, 0.15));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 1.8rem;
+            flex-shrink: 0;
+        }
+        
+        .contact-details h3 {
+            font-size: 1.4rem;
+            margin-bottom: 8px;
+            color: var(--dark);
+        }
+        
+        .contact-form .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 16px 20px;
+            border: 2px solid var(--light-gray);
+            border-radius: 12px;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1.05rem;
+            transition: var(--transition);
+        }
+        
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border-color: var(--primary);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.2);
+        }
+        
+        .contact-form textarea {
+            height: 180px;
+            resize: vertical;
+        }
+        
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--dark), #1a1a1a);
+            color: var(--white);
+            padding: 80px 0 30px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+        
+        .footer-column h3 {
+            font-size: 1.6rem;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent), var(--secondary));
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 14px;
+        }
+        
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 1.05rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .footer-links a i {
+            margin-right: 10px;
+            color: var(--accent);
+            font-size: 0.9rem;
+        }
+        
+        .footer-links a:hover {
+            color: var(--white);
+            padding-left: 5px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 18px;
+            margin-top: 25px;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: var(--white);
+            transition: var(--transition);
+            font-size: 1.3rem;
+        }
+        
+        .social-links a:hover {
+            background: var(--accent);
+            transform: translateY(-5px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #aaa;
+            font-size: 1rem;
+        }
+        
+        /* Order Page Styles */
+        .order-page {
+            display: none;
+            padding: 80px 0;
+            background: var(--light);
+        }
+        
+        .order-form {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 50px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+        
+        .order-form h2 {
+            text-align: center;
+            margin-bottom: 10px;
+            color: var(--primary);
+            font-size: 2.5rem;
+        }
+        
+        .order-form p {
+            text-align: center;
+            color: var(--gray);
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin-bottom: 25px;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: var(--dark);
+            font-size: 1.05rem;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 16px 20px;
+            border: 2px solid var(--light-gray);
+            border-radius: 12px;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1.05rem;
+            transition: var(--transition);
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--primary);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.2);
+        }
+        
+        .product-selection {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+        
+        .product-option {
+            border: 2px solid var(--light-gray);
+            border-radius: 16px;
+            padding: 25px 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: var(--transition);
+            background: var(--white);
+        }
+        
+        .product-option:hover,
+        .product-option.selected {
+            border-color: var(--primary);
+            background: rgba(46, 125, 50, 0.05);
+            transform: translateY(-5px);
+        }
+        
+        .product-option h4 {
+            margin-bottom: 15px;
+            color: var(--primary);
+            font-size: 1.3rem;
+        }
+        
+        .product-option .price {
+            font-weight: 800;
+            font-size: 1.4rem;
+            color: var(--primary);
+            margin: 10px 0;
+        }
+        
+        .payment-methods {
+            display: flex;
+            gap: 25px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+        
+        .payment-method {
+            flex: 1;
+            min-width: 180px;
+            text-align: center;
+            padding: 25px 15px;
+            border: 2px solid var(--light-gray);
+            border-radius: 16px;
+            cursor: pointer;
+            transition: var(--transition);
+            background: var(--white);
+        }
+        
+        .payment-method:hover,
+        .payment-method.selected {
+            border-color: var(--primary);
+            background: rgba(46, 125, 50, 0.05);
+            transform: translateY(-5px);
+        }
+        
+        .payment-method i {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+            display: block;
+        }
+        
+        .payment-method p {
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        
+        .order-summary {
+            background: linear-gradient(135deg, rgba(46, 125, 50, 0.08), rgba(76, 175, 80, 0.08));
+            padding: 30px;
+            border-radius: 16px;
+            margin: 30px 0;
+            border: 1px solid var(--light-gray);
+        }
+        
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px dashed var(--light-gray);
+        }
+        
+        .summary-row:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+        
+        .total-row {
+            font-weight: 800;
+            font-size: 1.4rem;
+            color: var(--primary);
+            margin-top: 10px;
+            padding-top: 20px;
+            border-top: 2px solid var(--primary);
+        }
+        
+        .btn-container {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-image {
+                height: 400px;
+            }
+            
+            .hero h1 {
+                font-size: 3.2rem;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .nav-links li {
+                margin: 8px 12px;
+            }
+            
+            .hero {
+                padding: 160px 0 100px;
+            }
+            
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .hero-stats {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .btn-container {
+                flex-direction: column;
+            }
+            
+            .btn {
+                width: 100%;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2.3rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2.2rem;
+            }
+            
+            .order-content h2 {
+                font-size: 2.4rem;
+            }
+            
+            .product-card {
+                max-width: 350px;
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo" id="home-link">
+                    <div class="logo-icon">D</div>
+                    <div class="logo-text">Dalinan</div>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="#home" id="nav-home">Home</a></li>
+                    <li><a href="#products" id="nav-products">Products</a></li>
+                    <li><a href="#about" id="nav-about">About Us</a></li>
+                    <li><a href="#contact" id="nav-contact">Contact</a></li>
+                    <li><a href="#" class="btn" id="order-btn">Order Now</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Eco-Friendly Laundry Detergent for Professional Laundry Shops</h1>
+                <p>Switch to Dalinan - the Philippines' first paper-packaged laundry detergent that's tough on stains but gentle on the environment.</p>
+                <a href="#" class="btn btn-accent" id="hero-order-btn">Order Now</a>
+                
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-value">500+</div>
+                        <div class="stat-label">Laundry Shops Served</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">90%</div>
+                        <div class="stat-label">Plastic Waste Reduced</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">200+</div>
+                        <div class="stat-label">Washes per Pack</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section" id="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Choose Dalinan?</h2>
+                <p>Designed specifically for laundry shop owners who care about both performance and the planet</p>
+            </div>
+            <div class="features">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Eco-Friendly Packaging</h3>
+                    <p>100% recyclable paper packaging instead of plastic. Reduce your shop's plastic waste by up to 90%.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-tshirt"></i>
+                    </div>
+                    <h3>Professional Strength</h3>
+                    <p>Formulated specifically for commercial laundry machines with powerful stain-fighting enzymes.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-hand-holding-usd"></i>
+                    </div>
+                    <h3>Cost Effective</h3>
+                    <p>Concentrated formula means more loads per pack, saving you money in the long run.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="section products" id="products">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Premium Products</h2>
+                <p>Choose the perfect formula for your laundry shop's needs</p>
+            </div>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-img">
+                        <i class="fas fa-box"></i>
+                        <div class="eco-badge">
+                            <i class="fas fa-recycle"></i> Eco-Pack
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Dalinan Regular</h3>
+                        <p>For everyday laundry needs. Gentle on fabrics, tough on stains. Our best-selling formula.</p>
+                        <div class="product-price">₱499.00</div>
+                        <div class="product-meta">
+                            <span>10kg</span>
+                            <span>200 washes</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">
+                        <i class="fas fa-spa"></i>
+                        <div class="eco-badge">
+                            <i class="fas fa-recycle"></i> Eco-Pack
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Dalinan Sensitive</h3>
+                        <p>Hypoallergenic formula for customers with sensitive skin. Fragrance-free and gentle.</p>
+                        <div class="product-price">₱549.00</div>
+                        <div class="product-meta">
+                            <span>10kg</span>
+                            <span>200 washes</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">
+                        <i class="fas fa-star"></i>
+                        <div class="eco-badge">
+                            <i class="fas fa-recycle"></i> Eco-Pack
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Dalinan Premium</h3>
+                        <p>With added fabric softener and fresh scent. Premium experience for your customers.</p>
+                        <div class="product-price">₱599.00</div>
+                        <div class="product-meta">
+                            <span>10kg</span>
+                            <span>200 washes</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Section -->
+    <section class="section order-section" id="order">
+        <div class="container">
+            <div class="order-content">
+                <h2>Ready to Make the Switch?</h2>
+                <p>Join hundreds of laundry shops across the Philippines that have already switched to Dalinan.</p>
+                <a href="#" class="btn btn-accent" id="cta-order-btn">Order Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About Dalinan</h2>
+                    <p>Dalinan was founded in 2020 by a group of environmentalists and laundry industry professionals who saw the massive plastic waste problem in the laundry sector.</p>
+                    <p>We developed a revolutionary paper-based packaging system that maintains the detergent's effectiveness while eliminating plastic waste. Our formula is biodegradable and safe for all water systems.</p>
+                    <p>Today, Dalinan is trusted by over 500 laundry shops nationwide, helping them reduce their environmental impact while delivering superior cleaning results.</p>
+                    <a href="#contact" class="btn">Contact Us</a>
+                </div>
+                <div class="about-image">
+                    <div class="about-image-content">
+                        <h3>Eco-Friendly Innovation</h3>
+                        <p>100% Plastic-Free Packaging</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact-section" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+                <p>Have questions or ready to place your first order? Get in touch with our team.</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Our Location</h3>
+                            <p>Unit 501, Eco Tower, 123 Green Avenue, Makati City, Philippines</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Phone</h3>
+                            <p>+63 2 1234 5678</p>
+                            <p>+63 917 123 4567 (Globe)</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <p>orders@dalinan.ph</p>
+                            <p>support@dalinan.ph</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" placeholder="Enter your full name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="shop">Laundry Shop Name</label>
+                                <input type="text" id="shop" placeholder="Enter your shop name" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" placeholder="Enter your email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" placeholder="+63" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" placeholder="Tell us about your laundry shop and order requirements"></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Page (Hidden by default) -->
+    <section class="order-page" id="order-page">
+        <div class="container">
+            <div class="order-form">
+                <h2>Place Your Order</h2>
+                <p>Fill out the form below to order Dalinan eco-friendly laundry detergent for your shop.</p>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="order-name">Full Name</label>
+                        <input type="text" id="order-name" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="order-shop">Laundry Shop Name</label>
+                        <input type="text" id="order-shop" placeholder="Enter your shop name" required>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="order-email">Email</label>
+                        <input type="email" id="order-email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="order-phone">Phone Number</label>
+                        <input type="tel" id="order-phone" placeholder="+63" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="order-address">Complete Address</label>
+                    <textarea id="order-address" placeholder="Street, Barangay, City, Province" required></textarea>
+                </div>
+                
+                <h3 style="margin: 30px 0 20px; color: var(--primary);">Select Product</h3>
+                <div class="product-selection">
+                    <div class="product-option selected" data-product="regular" data-price="499">
+                        <h4>Dalinan Regular</h4>
+                        <p>10kg - 200 washes</p>
+                        <div class="price">₱499.00</div>
+                    </div>
+                    <div class="product-option" data-product="sensitive" data-price="549">
+                        <h4>Dalinan Sensitive</h4>
+                        <p>10kg - 200 washes</p>
+                        <div class="price">₱549.00</div>
+                    </div>
+                    <div class="product-option" data-product="premium" data-price="599">
+                        <h4>Dalinan Premium</h4>
+                        <p>10kg - 200 washes</p>
+                        <div class="price">₱599.00</div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="quantity">Quantity (in kg)</label>
+                    <input type="number" id="quantity" min="10" step="10" value="10" required>
+                </div>
+                
+                <h3 style="margin: 30px 0 20px; color: var(--primary);">Payment Method</h3>
+                <div class="payment-methods">
+                    <div class="payment-method selected" data-method="gcash">
+                        <i class="fab fa-gcash"></i>
+                        <p>GCash</p>
+                    </div>
+                    <div class="payment-method" data-method="bank">
+                        <i class="fas fa-university"></i>
+                        <p>Bank Transfer</p>
+                    </div>
+                    <div class="payment-method" data-method="cod">
+                        <i class="fas fa-truck"></i>
+                        <p>Cash on Delivery</p>
+                    </div>
+                </div>
+                
+                <div class="order-summary">
+                    <div class="summary-row">
+                        <span>Product:</span>
+                        <span id="summary-product">Dalinan Regular</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Price per kg:</span>
+                        <span id="summary-price">₱49.90</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Quantity:</span>
+                        <span id="summary-quantity">10 kg</span>
+                    </div>
+                    <div class="summary-row total-row">
+                        <span>Total:</span>
+                        <span id="summary-total">₱499.00</span>
+                    </div>
+                </div>
+                
+                <div class="btn-container">
+                    <button type="submit" class="btn" id="submit-order">Place Order</button>
+                    <button type="button" class="btn" style="background: linear-gradient(135deg, #6c757d, #495057);" id="back-to-home">Back to Home</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Dalinan</h3>
+                    <p>Eco-friendly laundry detergent for professional laundry shops in the Philippines. Reducing plastic waste one wash at a time.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="#products"><i class="fas fa-chevron-right"></i> Products</a></li>
+                        <li><a href="#about"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Products</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Dalinan Regular</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Dalinan Sensitive</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Dalinan Premium</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Bulk Orders</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> Makati City, Philippines</li>
+                        <li><i class="fas fa-phone"></i> +63 2 1234 5678</li>
+                        <li><i class="fas fa-envelope"></i> orders@dalinan.ph</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Dalinan Eco Laundry. All rights reserved. | Designed for Laundry Shop Owners in the Philippines</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navigation functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get all navigation links
+            const navLinks = document.querySelectorAll('.nav-links a, #hero-order-btn, #cta-order-btn, #order-btn');
+            const orderPage = document.getElementById('order-page');
+            const backToHomeBtn = document.getElementById('back-to-home');
+            
+            // Show order page when order buttons are clicked
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // If it's an order button, show order page
+                    if (this.id === 'order-btn' || this.id === 'hero-order-btn' || this.id === 'cta-order-btn') {
+                        document.querySelector('.hero').style.display = 'none';
+                        document.querySelectorAll('.section').forEach(section => {
+                            section.style.display = 'none';
+                        });
+                        document.querySelector('footer').style.display = 'none';
+                        orderPage.style.display = 'block';
+                        window.scrollTo(0, 0);
+                    } 
+                    // Otherwise, scroll to section
+                    else {
+                        const targetId = this.getAttribute('href').substring(1);
+                        const targetSection = document.getElementById(targetId);
+                        if (targetSection) {
+                            window.scrollTo({
+                                top: targetSection.offsetTop - 100,
+                                behavior: 'smooth'
+                            });
+                        }
+                    }
+                });
+            });
+            
+            // Back to home button
+            backToHomeBtn.addEventListener('click', function() {
+                orderPage.style.display = 'none';
+                document.querySelector('.hero').style.display = 'block';
+                document.querySelectorAll('.section').forEach(section => {
+                    section.style.display = 'block';
+                });
+                document.querySelector('footer').style.display = 'block';
+                window.scrollTo(0, 0);
+            });
+            
+            // Product selection
+            const productOptions = document.querySelectorAll('.product-option');
+            const summaryProduct = document.getElementById('summary-product');
+            const summaryPrice = document.getElementById('summary-price');
+            const summaryQuantity = document.getElementById('summary-quantity');
+            const summaryTotal = document.getElementById('summary-total');
+            const quantityInput = document.getElementById('quantity');
+            
+            let selectedProduct = 'regular';
+            let selectedPrice = 499;
+            
+            productOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    // Remove selected class from all options
+                    productOptions.forEach(opt => opt.classList.remove('selected'));
+                    
+                    // Add selected class to clicked option
+                    this.classList.add('selected');
+                    
+                    // Update selected product and price
+                    selectedProduct = this.getAttribute('data-product');
+                    selectedPrice = parseFloat(this.getAttribute('data-price'));
+                    
+                    // Update summary
+                    updateOrderSummary();
+                });
+            });
+            
+            // Quantity change
+            quantityInput.addEventListener('input', function() {
+                // Ensure quantity is multiple of 10 and at least 10
+                let value = parseInt(this.value) || 10;
+                if (value < 10) value = 10;
+                if (value % 10 !== 0) {
+                    value = Math.ceil(value / 10) * 10;
+                }
+                this.value = value;
+                updateOrderSummary();
+            });
+            
+            // Payment method selection
+            const paymentMethods = document.querySelectorAll('.payment-method');
+            paymentMethods.forEach(method => {
+                method.addEventListener('click', function() {
+                    paymentMethods.forEach(m => m.classList.remove('selected'));
+                    this.classList.add('selected');
+                });
+            });
+            
+            // Initialize first product as selected
+            productOptions[0].classList.add('selected');
+            
+            // Update order summary
+            function updateOrderSummary() {
+                const quantity = parseInt(quantityInput.value) || 10;
+                const pricePerKg = selectedPrice / 10;
+                const total = pricePerKg * quantity;
+                
+                // Update summary
+                summaryProduct.textContent = document.querySelector(`.product-option[data-product="${selectedProduct}"] h4`).textContent;
+                summaryPrice.textContent = `₱${pricePerKg.toFixed(2)}`;
+                summaryQuantity.textContent = `${quantity} kg`;
+                summaryTotal.textContent = `₱${total.toFixed(2)}`;
+            }
+            
+            // Form submission
+            document.getElementById('submit-order').addEventListener('click', function() {
+                const name = document.getElementById('order-name').value;
+                const shop = document.getElementById('order-shop').value;
+                const email = document.getElementById('order-email').value;
+                const phone = document.getElementById('order-phone').value;
+                const address = document.getElementById('order-address').value;
+                const quantity = document.getElementById('quantity').value;
+                const total = document.getElementById('summary-total').textContent;
+                
+                if (!name || !shop || !email || !phone || !address) {
+                    alert('Please fill in all required fields.');
+                    return;
+                }
+                
+                // In a real application, this would send data to a server
+                alert(`Thank you for your order, ${name}!\n\nOrder Details:\n- Laundry Shop: ${shop}\n- Product: ${
